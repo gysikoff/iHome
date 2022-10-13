@@ -1,0 +1,350 @@
+body{
+  margin: 0!important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(211, 211, 211);
+  background-color: #3b4355;
+}
+
+.App {
+  text-align: center;
+}
+
+
+.logo{
+  height: 50px;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.container {
+  width: 1000px;;
+  margin: auto;
+}
+
+.object-switch{
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 60px;
+  margin: 0 10px;
+  line-height: 80px;
+}
+
+.object-slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(180, 39, 39);
+  transition: .4s;
+  border-radius: 34px;
+  line-height: 80px;
+  transform: translateY(15%);
+}
+
+.object-swtich input {
+  display: none;
+}
+
+.object-slider:before{
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50px;
+}
+
+input:checked + .object-slider{
+  background-color: green;
+}
+
+input:checked + .object-slider:before{
+  transform: translateX(50px);
+}
+
+.object-name {
+  font-size: 40px;
+  float: left;
+  width: 60%;
+  height: 70px;
+  line-height: 80px;
+}
+
+.object-toggle{
+  float:left;
+  width: 15%;
+  line-height: 80px;
+}
+
+.object-edit{
+  float:left;
+}
+
+.object-delete{
+  float:left;
+}
+
+.object-container{
+  clear:both;
+  height:80px;
+  margin-top: 10px;
+  background-color: #282c34;
+  border-radius: 30px;
+}
+
+.object-edit{
+  width: 10%;
+}
+
+.object-edit-button{
+  transition: .4s;
+  font-size: 60px;
+  color: rgb(124, 124, 240);
+  display: inline-block;
+  position: relative;
+  line-height: 80px;
+}
+
+.object-delete{
+  width:10%;
+}
+
+.object-delete-button{
+  position: relative;
+  display: inline-block;
+  transition: .4s;
+  font-size: 60px;
+  color:rgb(134, 4, 4);
+  line-height: 80px;
+}
+
+.object-edit-button:hover{
+  transition: .4s;
+  cursor: pointer;
+  color:blue;
+}
+
+.object-delete-button:hover{
+  transition: .4s;
+  color:red;
+  cursor: pointer;
+}
+
+.room-header{
+  height:80px;
+  font-size: 25px;
+  border-radius: 30px;
+  background-color: #1d2027;
+  clear: both;
+  margin-top: 10px;
+}
+
+
+.room-delete-button{
+
+  display: inline-block;
+  transition: .4s;
+  font-size: 60px;
+  color:rgb(134, 4, 4);
+  line-height: 80px;
+}
+
+.room-edit-button{
+  transition: .4s;
+  font-size: 60px;
+  color: rgb(124, 124, 240);
+  display: inline-block;
+  line-height: 80px;
+}
+
+.room-delete-button:hover{
+  transition: .4s;
+  color:red;
+  cursor: pointer;
+}
+
+.room-edit-button:hover{
+  transition: .4s;
+  cursor: pointer;
+  color:blue;
+}
+
+.room-url{
+  float:left;
+  width:60%;
+  font-size: 30px;
+  height: 80px;
+}
+
+.room-edit{
+  float:left;
+  width:10%;
+}
+
+.room-delete{
+  float:left;
+  width:10%;
+}
+
+.room-container{
+  clear:both;
+  height: 80px;
+  background-color: #282c34;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.room-edit-float, .object-edit-float{
+  background-color: grey;
+  position: absolute;
+  display: block;
+  width: 1000px;
+  height: 80px;
+  border-radius: 30px;
+}
+
+.room-edit-float-accept-button, .object-edit-float-accept-button, .add-room-button, .add-object-button{
+  color:rgb(33, 105, 33);
+  display: inline-block;
+  transition: .4s;
+  font-size: 50px;
+}
+
+.room-edit-float-accept-button:hover, .object-edit-float-accept-button:hover, .add-room-button:hover, .add-object-button:hover{
+  cursor: pointer;
+  transition: .4s;
+  color: green;
+}
+
+.room-edit-float-clear-button, .object-edit-float-clear-button{
+  color:rgb(148, 48, 48);
+  display: inline-block;
+  transition: .4s;
+  font-size: 50px;
+}
+
+.room-edit-float-clear-button:hover, .object-edit-float-clear-button:hover{
+  cursor: pointer;
+  transition: .4s;
+  color: red;
+}
+
+.room-edit-float, .object-edit-float{
+  clear:both;
+  position: fixed;
+}
+
+.room-edit-float-field, .object-edit-float-field{
+  float:left;
+  width: calc(60% - 40px);
+  font-size: 40px;
+  margin-top: 15px;
+  margin-left: 15px;;
+}
+
+.room-edit-float-accept, .object-edit-float-accept{
+  float:left;
+  width:10%;
+}
+
+.room-edit-float-clear, .object-edit-float-clear{
+  float:left;
+  width:10%;
+}
+
+.add-room-field-name, .add-room-field-desc, .object-room-field-name, .object-room-field-desc, .add-object-field-name, .add-object-field-desc{
+  float:left;
+  width:100%;
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+.add-room-fields-wrapper, .add-object-fields-wrapper{
+  margin-left: 15px;
+  width:61%;
+  float: left;
+  height:80px;
+}
+
+.room-container-add, .object-container-add{
+  clear:both;
+  height: 80px;
+  background-color: #282c34;
+  display: block;
+  width: 1000px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+h3{
+  line-height: 20px;
+}
+
+.name-header{
+  width: 90%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 40px;
+}
+
+b{
+  margin-right: 10%;
+}
+
+.back-button{
+  width: 10%;
+  float: left;
+  height: 80px;
+  font-size: 55px;
+  color: coral;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: rgb(211, 211, 211);
+}
+
+.add-object-field-name, .add-object-field-desc, .add-room-field-name, .add-room-field-desc{
+  border-radius: 30px;
+  padding: 4px 10px;
+  color: white;
+  background-color: #475168;
+  border: none;
+}
+
+.room-edit-float, .object-edit-float{
+  background-color: #282c34;
+}
+
+.room-edit-float-field, .object-edit-float-field{
+  border-radius: 30px;
+  padding: 3px 20px;
+  color: white;
+  background-color: #475168;
+  border: none;
+}
+
+.room-name{
+  line-height: 12px;
+}
+
+.add-room-button, .add-object-button{
+  height: 80px;
+  line-height: 80px;
+}
+
+.top-bar{
+  width: 100%;
+  background-color: #1d2027;
+  height: 120px;
+}
+
+.logo {
+  text-align: center;
+}
